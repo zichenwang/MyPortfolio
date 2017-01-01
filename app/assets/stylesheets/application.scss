@@ -12,6 +12,103 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+@mixin size($height: 100%, $width: 100%) {
+    height: $height;
+    width: $width;
+}
+
+@mixin venPre($prop, $value) {
+    #{$prop}: #{$value};
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+}
+
+*,
+*::before,
+*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    @include size();
+    font-size: 100%;
+}
+
+body {
+  @include size();
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 0;
+	padding: 0;
+	border: 0;
+  line-height: 1;
+  background: #242943;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+	font-weight: 600;
+	line-height: 1.65;
+  margin: 0 0 1em 0;
+}
+
+p {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.35rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+}
+
+h5 {
+	font-size: 0.9rem;
+}
+
+h6 {
+	font-size: 0.7rem;
+}
+
+a {
+  @include venPre($prop: "transition", $value: "color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out");
+
+	text-decoration: none;
+}
+
+a:hover {
+  border-bottom-color: transparent;
+	color: #9bf1ff !important;
+  text-decoration: none;
+}
+
+a:active {
+	color: #53e3fb !important;
+  text-decoration: none;
+}

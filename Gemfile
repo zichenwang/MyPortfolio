@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "font-awesome-rails"
+gem 'normalize-rails'
+gem 'google-webfonts-rails'
 
 group :production do
    gem 'pg'
