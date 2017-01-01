@@ -46,10 +46,67 @@ header :first-child::after {
     display: inline-block;
     width: 60%;
     font-style: italic;
+    text-align: right;
   }
 
   .fa {
     font-size: 1.5rem;
     color: white;
   }
+}
+
+.tiles {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  @include venPre($prop: "flex-wrap", $value: "wrap");
+
+  article {
+    @include size($height: 20rem, $width: 40%);
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    @include venPre($prop: "align-items", $value: "center");
+    padding: 4rem 4rem 2rem 4rem;
+    cursor: default;
+    opacity: 0.85;
+
+    header {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  
+}
+
+.tiles article:nth-child(4n - 1),
+.tiles article:nth-child(4n - 2) {
+  width: 60%;
+}
+
+.tiles article:nth-child(6n - 5){
+  background-color: #6fc3df;
+}
+
+.tiles article:nth-child(6n - 4){
+  background-color: #8d82c4;
+}
+
+.tiles article:nth-child(6n - 3){
+  background-color: #ec8d81;
+}
+
+.tiles article:nth-child(6n - 2){
+  background-color: #e7b788;
+}
+
+.tiles article:nth-child(6n - 1){
+  background-color: #8ea9e8;
+}
+
+.tiles article:nth-child(6n){
+  background-color: #87c5a4;
 }
