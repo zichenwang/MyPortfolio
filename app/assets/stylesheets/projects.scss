@@ -1,3 +1,55 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin size($height: 100%, $width: 100%) {
+    height: $height;
+    width: $width;
+}
+
+@mixin venPre($prop, $value) {
+    #{$prop}: #{$value};
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+}
+
+header :first-child::after {
+  @include size($height: 2px, $width: 100%);
+  content: '';
+  background-color: white;
+  display: block;
+  margin: 0.325em 0 0.5em 0;
+}
+
+#banner {
+  @include size($height: 30rem, $width: 100%);
+  background-image: url("banner.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  .inner {
+    @include size($height: 100%, $width: 80%);
+    margin: auto;
+  }
+
+  ul {
+    float: right;
+    display: inline-block;
+    margin-right: 5rem;
+  }
+
+  p {
+    display: inline-block;
+    width: 60%;
+    font-style: italic;
+  }
+
+  .fa {
+    font-size: 1.5rem;
+    color: white;
+  }
+}
