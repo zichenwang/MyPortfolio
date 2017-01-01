@@ -1,0 +1,46 @@
+<section id="banner">
+  <div class="inner">
+    <header>
+      <h1>Hello, I am Zichen</h1>
+    </header>
+    <div class="content">
+      <p>Do the best until you know better. Then when you know better do better.</p>
+      <ul class="icons">
+        <li class="icon"></li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<main>
+  <section id="projects">
+    <% @projects.each do |project| %>
+      <article class="">
+        <span class="image"></span>
+        <header>
+          <h3><%=project.name%></h3>
+          <p><%=project.intro%></p>
+        </header>
+        <p><%= link_to project.name, project %></p>
+      </article>
+    <% end %>
+  </section>
+
+  <section id="about-me">
+    <div class="inner">
+      <header>
+        <h2>About me</h2>
+      </header>
+      <p>I just graduated from NU</p>
+      <p>Skills</p>
+      <a href="#">link to my resume</a>
+    </div>
+  </section>
+
+  <section class="contact">
+
+  </section>
+  <footer></footer>
+
+</main>
