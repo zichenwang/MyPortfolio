@@ -68,6 +68,7 @@ p {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.15rem;
+  line-height: 1.5rem;
 }
 
 h1 {
@@ -97,6 +98,7 @@ h6 {
 a {
   @include venPre($prop: "transition", $value: "color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out");
 	text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -128,4 +130,5 @@ hr {
   @include size($height: 3rem, $width: 100%);
   position: fixed;
   background-color: #242943;
+  z-index: 1000;
 }

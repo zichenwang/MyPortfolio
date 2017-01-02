@@ -21,6 +21,11 @@ header :first-child::after {
   margin: 0.325em 0 0.5em 0;
 }
 
+.inner {
+  @include size($height: 100%, $width: 80%);
+  margin: auto;
+}
+
 #banner {
   @include size($height: 30rem, $width: 100%);
   background-image: url("banner.jpg");
@@ -30,11 +35,6 @@ header :first-child::after {
   background-size: cover;
   padding-top: 10rem;
   padding-bottom: 10rem;
-
-  .inner {
-    @include size($height: 100%, $width: 80%);
-    margin: auto;
-  }
 
   ul {
     float: right;
@@ -140,4 +140,37 @@ header :first-child::after {
 
 .tiles article:nth-child(6n)::before{
   background-color: #87c5a4;
+}
+
+#about-me {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .content {
+    display: table;
+    @include size();
+  }
+
+  p {
+    display: table-cell;;
+    width: 60%;
+  }
+
+  .link {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    a {
+      position: absolute;
+      right: 0;
+      padding: 1rem;
+      border: 1px solid white;
+    }
+
+    a:hover {
+      border-color: #9bf1ff;
+    }
+  }
+
+
 }
