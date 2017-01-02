@@ -34,7 +34,6 @@ gem 'bootstrap-sass'
 # gem 'capistrano-rails', group: :development
 gem "font-awesome-rails"
 gem 'normalize-rails'
-gem 'google-webfonts-rails'
 
 group :production do
    gem 'pg'
