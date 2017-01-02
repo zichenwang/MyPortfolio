@@ -55,6 +55,10 @@ header :first-child::after {
   }
 }
 
+.tiles + * {
+    border-top: 0 !important;
+}
+
 .tiles {
   display: -moz-flex;
   display: -webkit-flex;
@@ -63,23 +67,45 @@ header :first-child::after {
   @include venPre($prop: "flex-wrap", $value: "wrap");
 
   article {
-    @include size($height: 20rem, $width: 40%);
+    @include size($height: 23rem, $width: 40%);
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     @include venPre($prop: "align-items", $value: "center");
     padding: 4rem 4rem 2rem 4rem;
-    cursor: default;
-    opacity: 0.85;
+    max-height: 40rem;
+    min-height: 23rem;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     header {
       position: relative;
       z-index: 3;
     }
+
+    a {
+      z-index: 4;
+    }
   }
 
-  
+  article::before {
+    content: '';
+    @include size($height: 100%, $width: 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.85;
+    z-index: 2;
+  }
+
+  article:hover:before {
+    opacity: 0;
+  }
+
+
 }
 
 .tiles article:nth-child(4n - 1),
@@ -87,26 +113,26 @@ header :first-child::after {
   width: 60%;
 }
 
-.tiles article:nth-child(6n - 5){
+.tiles article:nth-child(6n - 5)::before{
   background-color: #6fc3df;
 }
 
-.tiles article:nth-child(6n - 4){
+.tiles article:nth-child(6n - 4)::before{
   background-color: #8d82c4;
 }
 
-.tiles article:nth-child(6n - 3){
+.tiles article:nth-child(6n - 3)::before{
   background-color: #ec8d81;
 }
 
-.tiles article:nth-child(6n - 2){
+.tiles article:nth-child(6n - 2)::before{
   background-color: #e7b788;
 }
 
-.tiles article:nth-child(6n - 1){
+.tiles article:nth-child(6n - 1)::before{
   background-color: #8ea9e8;
 }
 
-.tiles article:nth-child(6n){
+.tiles article:nth-child(6n)::before{
   background-color: #87c5a4;
 }
