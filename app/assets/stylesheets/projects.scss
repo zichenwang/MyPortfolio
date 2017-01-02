@@ -87,13 +87,18 @@ header :first-child::after {
     }
 
     a {
+      @include size();
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 0;
       z-index: 4;
     }
   }
 
   article::before {
     content: '';
-    @include size($height: 100%, $width: 100%);
+    @include size();
     position: absolute;
     left: 0;
     bottom: 0;
