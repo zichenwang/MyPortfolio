@@ -1,9 +1,20 @@
-<main>
+<main class="single-project">
   <section>
     <div class="inner">
       <header>
-        <h1><%=project.name%></h1>
+        <h1><%=@project.name%></h1>
       </header>
+      <div class="row">
+        <div class="col-md-8">
+          <p class="area"><%= @project.area %></p>
+        </div>
+        <div class="col-md-4">
+          <p class="date"><%= @project.date %></p>
+        </div>
+      </div>
+      <p><%= @project.intro %></p>
+      <p><%= @project.details %></p>
+      <p class="tech"><%= @project.tech %></p>
     </div>
   </section>
 </main>
