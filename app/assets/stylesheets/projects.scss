@@ -164,7 +164,6 @@ header :first-child::after {
 
     p {
       opacity: 0.95;
-      letter-spacing: 0.1rem;
     }
 
     p:nth-child(2) {
@@ -199,6 +198,11 @@ main.page {
 
   h1 {
     margin-bottom: 0;
+  }
+
+  p {
+    opacity: 0.9;
+    text-align: justify;
   }
 
   .row {

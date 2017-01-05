@@ -5,14 +5,17 @@
         <h1><%=@project.name%></h1>
       </header>
       <div class="row">
-        <div class="col-md-8">
-          <p class="area"><%= @project.area %></p>
+        <div class="col-md-8 area">
+          <p class=""><%= @project.area %></p>
         </div>
-        <div class="col-md-4">
-          <p class="date"><%= @project.date %></p>
+        <div class="col-md-4 date">
+          <p class=""><%= @project.date %></p>
         </div>
       </div>
-      <p><%= @project.details %></p>
+      <% @details.each do |detail|%>
+        <p><%= detail %></p>
+        <br>
+      <% end %>
       <p class="tech"><%= @project.tech %></p>
     </div>
   </section>
