@@ -164,6 +164,7 @@ header :first-child::after {
 
     p {
       opacity: 0.95;
+      letter-spacing: 0.1rem;
     }
 
     p:nth-child(2) {

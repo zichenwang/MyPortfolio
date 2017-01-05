@@ -19,7 +19,7 @@ Project.create!(
   date:"March 2016 - June 2016",
   area:"Full Stack Development",
   intro:"a central hub for APIs",
-  details:"blahblahblah\nblah",
+  details:"blahblahblah<br>blah",
   tech:"Meteor"
 )
 
