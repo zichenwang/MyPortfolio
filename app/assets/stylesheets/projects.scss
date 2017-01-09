@@ -165,15 +165,6 @@ header :first-child::after {
     p {
       opacity: 0.95;
     }
-
-    p:nth-child(2) {
-      display: block;
-      background-color: inherit;
-      opacity: 0.7;
-      font-style: italic;
-      font-size: 0.7rem;
-      text-indent: 2rem;
-    }
   }
 
   .link {
